@@ -1,0 +1,40 @@
+{% extends 'members/base.html' %}
+{% block content %}
+<h2 class="text-xl font-semibold mb-4">Dashboard</h2>
+<div class="grid grid-cols-4 gap-4 mb-6">
+  <div class="p-4 bg-indigo-50 rounded">Total Members<br><span class="text-2xl font-bold">{{ total }}</span></div>
+  <div class="p-4 bg-green-50 rounded">Homecells<br><span class="text-2xl font-bold">{{ per_homecell|length }}</span></div>
+  <div class="p-4 bg-yellow-50 rounded">Ministries<br><span class="text-2xl font-bold">{{ per_ministry|length }}</span></div>
+  <div class="p-4 bg-red-50 rounded">Active<br><span class="text-2xl font-bold">{{ members|length }}</span></div>
+</div>
+
+<h3 class="font-semibold mb-2">Age Breakdown</h3>
+<ul class="grid grid-cols-4 gap-4">
+  <li class="p-3 bg-white rounded shadow">Children: {{ age_breakdown.children }}</li>
+  <li class="p-3 bg-white rounded shadow">Youth: {{ age_breakdown.youth }}</li>
+  <li class="p-3 bg-white rounded shadow">Adults: {{ age_breakdown.adults }}</li>
+  <li class="p-3 bg-white rounded shadow">Elderly: {{ age_breakdown.elderly }}</li>
+</ul>
+
+<h3 class="mt-6 font-semibold">Recent Members</h3>
+<table class="min-w-full mt-4">
+  <thead>
+    <tr>
+      <th>First</th><th>Last</th><th>Homecell</th><th>Ministry</th><th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for m in members %}
+      <tr>
+        <td>{{ m.first_name }}</td>
+        <td>{{ m.last_name }}</td>
+        <td>{{ m.homecell }}</td>
+        <td>{{ m.ministry }}</td>
+        <td>{{ m.status }}</td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="5">No members found</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'members/base.html' %}
+{% block content %}
+<div class="max-w-md mx-auto py-8">
+  <div class="text-center mb-6">
+    <img src="/static/members/logo.png" alt="ZAG Logo" class="mx-auto h-20"/>
+    <h1 class="text-2xl font-bold">Zomba Assemblies of God</h1>
+    <p class="text-sm text-gray-500">Member Management System</p>
+  </div>
+  <form method="post" class="space-y-4">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="w-full bg-indigo-600 text-white p-2 rounded">Login</button>
+  </form>
+</div>
+{% endblock %}

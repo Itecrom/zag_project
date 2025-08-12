@@ -1,0 +1,20 @@
+Django>=4.2
+djangorestframework
+django-import-export
+Pillow
+openpyxl
+python-dotenv
+
+```macOS/Linux```
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+```Windows CMD```
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+
+```Windows Bash```python -m venv .venv
+source .venv/Scripts/activate    # or: . .venv/Scripts/activate
+pip install -r requirements.txt

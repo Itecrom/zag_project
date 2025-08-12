@@ -1,0 +1,28 @@
+{% extends 'members/base.html' %}
+{% block content %}
+<h2 class="text-xl font-semibold mb-4">Members</h2>
+<form method="get" class="mb-4">
+  <input type="text" name="q" placeholder="Search" class="p-2 border"/>
+  <button class="p-2 bg-indigo-600 text-white rounded">Search</button>
+</form>
+<a href="/members/new/" class="mb-4 inline-block bg-green-600 text-white p-2 rounded">Add Member</a>
+<table class="min-w-full mt-2 bg-white">
+  <thead>
+    <tr><th>First</th><th>Last</th><th>Homecell</th><th>Ministry</th><th>Status</th><th>Actions</th></tr>
+  </thead>
+  <tbody>
+    {% for m in members %}
+      <tr>
+        <td>{{ m.first_name }}</td>
+        <td>{{ m.last_name }}</td>
+        <td>{{ m.homecell }}</td>
+        <td>{{ m.ministry }}</td>
+        <td>{{ m.status }}</td>
+        <td><a href="/members/{{ m.id }}/edit/" class="text-indigo-600">Edit</a></td>
+      </tr>
+    {% empty %}
+      <tr><td colspan="6">No members</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

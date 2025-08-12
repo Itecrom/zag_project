@@ -1,0 +1,12 @@
+{% extends 'members/base.html' %}
+{% block content %}
+<h2 class="text-xl font-semibold mb-4">{% if member %}Edit Member{% else %}Add Member{% endif %}</h2>
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <div class="flex space-x-2">
+    <button type="submit" class="bg-blue-600 text-white p-2 rounded">Save</button>
+    <a href="/members/" class="bg-gray-300 p-2 rounded">Back</a>
+  </div>
+</form>
+{% endblock %}

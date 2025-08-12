@@ -1,0 +1,17 @@
+[
+  {"model": "members.homecell", "pk": 1, "fields": {"name": "Mulunguzi"}},
+  {"model": "members.homecell", "pk": 2, "fields": {"name": "Kalimbuka"}},
+  {"model": "members.homecell", "pk": 3, "fields": {"name": "Old Naisi"}},
+  {"model": "members.homecell", "pk": 4, "fields": {"name": "Matawale"}},
+  {"model": "members.homecell", "pk": 5, "fields": {"name": "St. Marys"}},
+  {"model": "members.homecell", "pk": 6, "fields": {"name": "Jerusalem"}},
+  {"model": "members.homecell", "pk": 7, "fields": {"name": "Mpunga"}},
+  {"model": "members.homecell", "pk": 8, "fields": {"name": "Likangala"}},
+  {"model": "members.homecell", "pk": 9, "fields": {"name": "Chikanda"}},
+  {"model": "members.homecell", "pk": 10, "fields": {"name": "Chanco"}},
+  {"model": "members.homecell", "pk": 11, "fields": {"name": "Atlarge"}},
+  {"model": "members.ministry", "pk": 1, "fields": {"name": "Mens"}},
+  {"model": "members.ministry", "pk": 2, "fields": {"name": "OMC"}},
+  {"model": "members.ministry", "pk": 3, "fields": {"name": "Youth"}},
+  {"model": "members.ministry", "pk": 4, "fields": {"name": "Children"}}
+]

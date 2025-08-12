@@ -1,0 +1,8 @@
+{% extends 'members/base.html' %}
+{% block content %}
+<h2 class="text-xl font-semibold mb-4">Sign up</h2>
+<form method="post">{% csrf_token %}
+  {{ form.as_p }}
+  <button class="bg-green-600 text-white p-2 rounded">Request Account</button>
+</form>
+{% endblock %}
